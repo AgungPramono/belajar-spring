@@ -21,8 +21,10 @@
     </bean>
     
     <!-- MemberDao memberDao = new MemberDao(koneksiDatabase) -->
-    <bean id="memberDao" class="com.belajar.ioc.dao.MemberDao">
+<!--    <bean id="memberDao" class="com.belajar.ioc.dao.MemberDao">
         <constructor-arg ref="koneksiDatabase"/>
-    </bean>
+    </bean>-->
+    
+    <context:component-scan base-package="com.belajar.ioc"/>
 
 </beans>

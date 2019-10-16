@@ -28,8 +28,8 @@ public class ManualIOC {
         member.setName("member001");
         
         //pakai constructor injector
-        MemberDao memberDao = new MemberDao(koneksi);
-        memberDao.save(member);
+//        MemberDao memberDao = new MemberDao(koneksi);
+//        memberDao.save(member);
     }
 
 }
