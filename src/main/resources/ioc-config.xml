@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- 
+        KoneksiDatabase koneksiDatabase = new KoneksiDatabase();
+        koneksiDatabase.setUrl("jdbc:postgresql://localhost/belajar");
+        koneksiDatabase.setUsername("demo");
+        koneksiDatabase.setPassword("cobacoba");
+    -->
+    <bean id="koneksiDatabase" class="com.belajar.ioc.model.KoneksiDatabase">
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="mysql://localhost:3306/example"/>
+        <property name="username" value="example123"/>
+        <property name="password" value="123"/>
+    </bean>
+    
+    <!-- MemberDao memberDao = new MemberDao(koneksiDatabase) -->
+    <bean id="memberDao" class="com.belajar.ioc.dao.MemberDao">
+        <constructor-arg ref="koneksiDatabase"/>
+    </bean>
 
 </beans>

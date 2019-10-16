@@ -16,8 +16,8 @@ public class MemberDao {
     
     private KoneksiDatabase koneksi;
     
-    public MemberDao(KoneksiDatabase koneksi){
-        this.koneksi = koneksi;
+    public MemberDao(KoneksiDatabase koneksiDatabase){
+        this.koneksi = koneksiDatabase;
     }
     
     public void save(Member member){
