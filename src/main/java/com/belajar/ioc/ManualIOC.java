@@ -27,6 +27,7 @@ public class ManualIOC {
         member.setId("001");
         member.setName("member001");
         
+        //pakai constructor injector
         MemberDao memberDao = new MemberDao(koneksi);
         memberDao.save(member);
     }
