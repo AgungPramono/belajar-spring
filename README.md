@@ -20,7 +20,7 @@
 
 3 Spring Hibernate
 
-4 Spring Data 
+4 Spring Data JPA
 
 5 Spring Unit Test
 
