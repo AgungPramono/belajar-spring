@@ -9,8 +9,13 @@
   * spring component scan
   * spring annotation
   * Konfigurasi Java
+
 2 Spring JDBC
+
 3 Spring Hibernate
-4 Spring Data JPA
+
+4 Spring Data 
+
 5 Spring Unit Test
+
 6 Spring Boot
