@@ -8,6 +8,7 @@ package com.belajar.ioc.config;
 import com.belajar.ioc.dao.MemberDao;
 import com.belajar.ioc.model.KoneksiDatabase;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -15,6 +16,7 @@ import org.springframework.context.annotation.Configuration;
  * @author bits
  */
 @Configuration
+@ComponentScan(basePackages = "com.belajar.ioc")
 public class ApplicationConfig {
     
     @Bean
@@ -27,9 +29,14 @@ public class ApplicationConfig {
         return koneksiDatabase;
     }
     
+//    @Bean
+//    public MemberDao memberDao(){
+//        MemberDao memberDao = new MemberDao(koneksiDatabase()); 
+//        return memberDao;
+//    }
     @Bean
     public MemberDao memberDao(){
-        MemberDao memberDao = new MemberDao(koneksiDatabase()); 
+        MemberDao memberDao = new MemberDao(); 
         return memberDao;
     }
     
