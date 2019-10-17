@@ -8,10 +8,12 @@
   * Bean
   * spring component scan
   * spring annotation
+  ```java
     - @Autowired
     - @Component
     - @Repository
     - @Service
+   ``` 
   * Konfigurasi Java
 
 2 Spring JDBC
