@@ -18,7 +18,7 @@ public class SpringIOC {
     
     public static void main(String[] args) {
         AbstractApplicationContext container = new ClassPathXmlApplicationContext("classpath:ioc-config.xml");
-        MemberDao memberDao = (MemberDao) container.getBean("memberDao");
+        MemberDao memberDao = (MemberDao) container.getBean(MemberDao.class);
         
         Member member = new Member();
         member.setId("001");
