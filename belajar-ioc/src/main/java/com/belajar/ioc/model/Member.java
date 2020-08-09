@@ -5,10 +5,12 @@
  */
 package com.belajar.ioc.model;
 
+
 /**
  *
  * @author bits
  */
+
 public class Member {
     
     private String id;

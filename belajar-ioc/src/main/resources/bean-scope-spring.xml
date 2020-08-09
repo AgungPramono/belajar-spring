@@ -10,5 +10,4 @@
     <bean id="member" class="com.belajar.ioc.model.Member"
         scope="prototype"/>
 
-
 </beans>
